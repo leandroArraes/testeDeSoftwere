@@ -1,15 +1,18 @@
-package GerenciadoraContasTest;
+package sistemabancario;
 
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
 
-import org.hamcrest.CoreMatchers.*;
+
+import static org.hamcrest.CoreMatchers.*;
+
 
 import sistemabancario.ContaCorrente;
 import sistemabancario.GerenciadoraContas;
@@ -37,8 +40,8 @@ public class GerenciadoraContasTest1 {
 		
 		
 		/*=====Montagem do cenário de teste=====*/
-		ContaCorrente conta01 = new ContaCorrente(1, 2000, true);
-		ContaCorrente conta02 = new ContaCorrente(2, 2000, true);
+		ContaCorrente conta01 = new ContaCorrente(1, 200, true);
+		ContaCorrente conta02 = new ContaCorrente(2, 0, true);
 		
 		
 		
@@ -57,7 +60,7 @@ public class GerenciadoraContasTest1 {
 			//assertTHat(resultadoTransferencia , is(true)0; //é a mesma coisa que a linha 48
 					
 			assertTrue(resultadoTransferencia);
-			assertThat(conta01.getSaldo(),is(150.0));
+			assertThat(conta01.getSaldo(), is(150.0));
 			assertThat(conta02.getSaldo(), is(50.0));
 			}
 }

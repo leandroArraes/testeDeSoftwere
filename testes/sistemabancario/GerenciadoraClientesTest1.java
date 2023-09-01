@@ -1,4 +1,4 @@
-package GerenciadoraContasTest;
+package sistemabancario;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertNull;
